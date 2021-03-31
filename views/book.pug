@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  div(class="container-fluid")
+  h1= title
+  - var result=[{name:"Twenty Yawns",price:35.6,author:"Jane Smiley"},{name:"wings Of Fire",price:40,author:"APJ Abdul Kalam",{name:"Two states",price:15,author:"Chetan Bhagat"}] 
+    div(class="row")
+      each form in result
+        div(class = "col-sm-2") #{form.name}
+        div(class = "col-sm-2") #{form.price}
+        div(class = "col-sm-2") #{form.author}
