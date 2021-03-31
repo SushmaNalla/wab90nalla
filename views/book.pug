@@ -6,4 +6,10 @@ block content
   div(class="container-fluid mt-3") 
   div(class="row") 
     each book,index in result
-      div(class="col-sm-4 bg-info m-1 p-3" style=("font-weight:bolder")) #{book.name} - #{book.price} - #{book.author}
+      div(class="col-sm-4 bg-info m-1 p-3" style=("font-weight:bolder") onclick=`buy(${index})`) #{book.name} - #{book.price} - #{book.author}
+  script.
+     
+      function buy(itemNo)
+        {
+          alert(`You purchased Item ${itemNo+1}`)
+        }
